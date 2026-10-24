@@ -1,0 +1,61 @@
+# ---- OS noise ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- editors / IDEs ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ---- dependencies (none required, but keep a checkout clean) ----
+node_modules/
+jspm_packages/
+bower_components/
+.pnp/
+.pnp.js
+
+# ---- build output & caches ----
+dist/
+build/
+.cache/
+.parcel-cache/
+.temp/
+tmp/
+*.tsbuildinfo
+
+# ---- logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- env & secrets ----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ---- local data exports (contain your study history) ----
+learn-it-all-export.json
+*.local.json
+
+# ---- test / coverage ----
+coverage/
+.nyc_output/
+
+# ---- static host config that is machine-specific ----
+.netlify/
+.vercel/

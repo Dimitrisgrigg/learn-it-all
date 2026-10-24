@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn It All — a calm spaced-repetition study workspace</title>
+<meta name="description" content="Learn It All is a self-hosted study workspace: organise subjects into lessons, build flashcards, and review them on a spaced-repetition schedule.">
+<meta name="theme-color" content="#2f5d50">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5d50'/%3E%3Cpath d='M9 22V10h3.2l3.8 6.4L19.8 10H23v12h-2.6v-7.6L16.7 20h-1.4l-3.7-5.6V22H9z' fill='%23fbf8f4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#view">Skip to content</a>
+
+<div class="app">
+
+  <aside class="sidebar" id="sidebar" aria-label="Primary">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-text">Learn It All<span class="brand-sub">study workspace</span></span>
+    </div>
+
+    <nav class="nav" aria-label="Sections">
+      <a class="nav-item" href="#/dashboard" data-nav="dashboard">
+        <span class="nav-ico" aria-hidden="true">◱</span><span>Dashboard</span>
+      </a>
+      <a class="nav-item" href="#/courses" data-nav="courses">
+        <span class="nav-ico" aria-hidden="true">▤</span><span>Courses</span>
+        <span class="nav-count" id="nav-course-count">0</span>
+      </a>
+      <a class="nav-item" href="#/study" data-nav="study">
+        <span class="nav-ico" aria-hidden="true">◈</span><span>Study</span>
+        <span class="nav-badge" id="nav-due-count" hidden>0</span>
+      </a>
+      <a class="nav-item" href="#/stats" data-nav="stats">
+        <span class="nav-ico" aria-hidden="true">◔</span><span>Progress</span>
+      </a>
+      <a class="nav-item" href="#/settings" data-nav="settings">
+        <span class="nav-ico" aria-hidden="true">⚙</span><span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="goal-card">
+        <div class="goal-row">
+          <span class="goal-label">Today</span>
+          <span class="goal-count" id="goal-count">0 / 20</span>
+        </div>
+        <div class="goal-bar"><span id="goal-fill"></span></div>
+        <p class="goal-hint" id="goal-hint">No reviews yet today.</p>
+      </div>
+      <p class="sidebar-note">Saved in this browser. No account, no server.</p>
+    </div>
+  </aside>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="icon-btn" id="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <span class="topbar-title" id="topbar-title">Dashboard</span>
+      <button class="btn btn-primary btn-sm" id="quick-add" type="button">+ New course</button>
+    </header>
+
+    <main class="view" id="view" tabindex="-1"></main>
+
+    <footer class="foot">
+      <span>Learn It All · static build · your data stays in this browser</span>
+      <a href="#/about">About this build</a>
+    </footer>
+  </div>
+
+</div>
+
+<div class="toast-stack" id="toasts" aria-live="polite"></div>
+<div class="modal-root" id="modal-root" hidden></div>
+
+<script src="assets/js/seed.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/views.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
